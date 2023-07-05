@@ -58,7 +58,7 @@ void ConfGeneratorDialog::on_pushButtonApply_clicked()
         messageBox.setIcon(QMessageBox::Information);
         messageBox.setWindowTitle("Configuration files created!");
         QString str = "Configuration files created!\n\n";
-        str += "You must restart Drivechain and any\n";
+        str += "You must restart Skydoge and any\n";
         str += "sidechains for changes to be applied.";
         messageBox.setText(str);
         messageBox.exec();
@@ -102,20 +102,20 @@ bool ConfGeneratorDialog::WriteConfigFiles(const QString& strUser, const QString
 
     std::string strData = "";
 #ifdef WIN32
-    strData = "Drivechain";
+    strData = "Skydoge";
 #else
 
 #ifdef MAC_OSX
-    strData = "Drivechain";
+    strData = "Skydoge";
 #else
-    strData = ".drivechain";
+    strData = ".skydoge";
 #endif
 #endif
 
-    // Does the drivechain directory exist?
+    // Does the skydoge directory exist?
     fs::path pathData = pathHome / strData;
     if (!fs::exists(pathData)) {
-        QString strError = "Drivechain data directory (~/.drivechain) not found!\n";
+        QString strError = "Skydoge data directory (~/.skydoge) not found!\n";
         messageBox.setText(strError);
         messageBox.exec();
         return false;
@@ -127,7 +127,7 @@ bool ConfGeneratorDialog::WriteConfigFiles(const QString& strUser, const QString
     // doesn't have RPC configured we will generate a new mainchain config file.
 
     // Do we need to backup the old config file?
-    fs::path pathConf = pathData / "drivechain.conf";
+    fs::path pathConf = pathData / "skydoge.conf";
     bool fExists = fs::exists(pathConf);
 
     // Check for existing RPC configuration

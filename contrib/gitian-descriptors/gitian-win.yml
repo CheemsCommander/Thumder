@@ -22,8 +22,8 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/drivechain-project/sidechains.git"
-  "dir": "sidechains"
+- "url": "https://github.com/CheemsCommander/Thumder.git"
+  "dir": "Thunder"
 files: []
 script: |
   WRAP_DIR=$HOME/wrapped

@@ -954,19 +954,19 @@ void SidechainPage::CheckConfiguration(bool& fConfig, bool& fConnection)
     std::string strDrivechainData = "";
 
 #ifdef WIN32
-    strDrivechainData = "Drivechain";
+    strDrivechainData = "Skydoge";
 #else
 #ifdef MAC_OSX
-    strDrivechainData = "Drivechain";
+    strDrivechainData = "Skydoge";
 #else
-    strDrivechainData = ".drivechain";
+    strDrivechainData = ".skydoge";
 #endif
 #endif
 
-    // Does the drivechain directory exist?
+    // Does the skydoge directory exist?
     fs::path pathDrivechainData = pathHome / strDrivechainData;
     if (!fs::exists(pathDrivechainData))
-        LogPrintf("%s: Configuration error - drivechain data directory not found!\n");
+        LogPrintf("%s: Configuration error - skydoge data directory not found!\n");
 
     // Does the sidechain directory exist?
     fs::path pathSide = GetDefaultDataDir();
@@ -975,10 +975,10 @@ void SidechainPage::CheckConfiguration(bool& fConfig, bool& fConnection)
     }
 
     // Do we have configuration files for the mainchain & sidechain?
-    fs::path pathConfMain = pathDrivechainData / "drivechain.conf";
+    fs::path pathConfMain = pathDrivechainData / "skydoge.conf";
     fs::path pathConfSide = pathSide / "thunder.conf";
 
-    // Do drivechain.conf & side.conf exist?
+    // Do skydoge.conf & side.conf exist?
     if (fs::exists(pathConfMain) && fs::exists(pathConfSide))
         fConfig = true;
 
