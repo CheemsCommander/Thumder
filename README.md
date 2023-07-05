@@ -13,3 +13,4 @@ Learn more about Drivechain here: http://drivechain.info
 For an example sidechain implementation, see: https://github.com/drivechain-project/sidechains
 
 License Bitcoin Core (and Drivechain) are released under the terms of the MIT license. See COPYING for more information or see https://opensource.org/licenses/MIT.
+# Thumder
